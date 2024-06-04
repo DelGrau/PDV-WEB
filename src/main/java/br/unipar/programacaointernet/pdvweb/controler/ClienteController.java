@@ -1,0 +1,49 @@
+package br.unipar.programacaointernet.pdvweb.controler;
+
+import br.unipar.programacaointernet.pdvweb.Service.ClienteService;
+import br.unipar.programacaointernet.pdvweb.model.Cliente;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+@Tag(name = "/ClienteController")
+@RestController
+public class ClienteController {
+    private final ClienteService clienteService;
+
+    public ClienteController(ClienteService clienteService) {
+        this.clienteService = clienteService;
+    }
+
+    @GetMapping(path = "/All")
+    public ResponseEntity<List<Cliente>> GetAll(){
+        return ResponseEntity.ok(clienteService.Todos());
+    }
+
+    @PostMapping(path = "/GetById")
+    public  ResponseEntity<Cliente> GetById(@RequestBody Integer id){
+        return ResponseEntity.ok(clienteService.buscarPorId(id));
+    }
+    @DeleteMapping(path = "/Delete")
+    public ResponseEntity Delete(@RequestBody Cliente cliente)
+    {
+        clienteService.buscarPorId(cliente.getId());
+        return ResponseEntity.ok("Cliente "+cliente.getNome()+" deletado com sucesso!");
+    }
+    @PostMapping(path = "/Save")
+    public ResponseEntity Save(@RequestBody Cliente cliente){
+        if(clienteService.buscarPorId(cliente.getId()) == null){
+            Cliente cli =  new Cliente();
+            cli.setNome(cliente.getNome());
+            cli.setEmail(cliente.getEmail());
+            cli.setTelefone(cliente.getTelefone());
+            clienteService.salvar(cli);
+            return ResponseEntity.ok("Cliente "+cliente.getNome()+" salvo com sucesso!");
+        }else{
+            clienteService.salvar(cliente);
+            return ResponseEntity.ok("Cliente "+cliente.getNome()+" atualizado com sucesso!");
+        }
+    }
+
+}
