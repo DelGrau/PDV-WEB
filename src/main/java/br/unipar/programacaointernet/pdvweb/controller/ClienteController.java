@@ -1,4 +1,4 @@
-package br.unipar.programacaointernet.pdvweb.controler;
+package br.unipar.programacaointernet.pdvweb.controller;
 
 import br.unipar.programacaointernet.pdvweb.Service.ClienteService;
 import br.unipar.programacaointernet.pdvweb.model.Cliente;
