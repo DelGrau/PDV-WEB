@@ -30,7 +30,7 @@ public class ClienteController {
     @DeleteMapping(path = "/delete")
     public ResponseEntity Delete(@RequestBody Cliente cliente)
     {
-        clienteService.buscarPorId(cliente.getId());
+        clienteService.excluir(cliente);
         return ResponseEntity.ok("Cliente "+cliente.getNome()+" deletado com sucesso!");
     }
     @PostMapping(path = "/save")
