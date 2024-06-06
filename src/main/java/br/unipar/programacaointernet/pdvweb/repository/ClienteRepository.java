@@ -8,5 +8,4 @@ import java.util.List;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
         Cliente findClienteById(Integer id);
-        void deleteCliente(Cliente cliente);
 }

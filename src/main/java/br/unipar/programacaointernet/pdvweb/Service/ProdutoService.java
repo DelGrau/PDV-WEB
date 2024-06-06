@@ -28,7 +28,7 @@ public class ProdutoService {
     }
 
     public void excluir(Produto produto) {
-        produtoRepository.deleteProduto(produto);
+        produtoRepository.delete(produto);
     }
 
     public List<Produto> Todos() {

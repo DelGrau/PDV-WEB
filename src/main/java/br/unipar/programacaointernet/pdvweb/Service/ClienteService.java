@@ -17,6 +17,6 @@ public class ClienteService {
 
     public Cliente buscarPorId(Integer id) {return clienteRepository.findClienteById(id);}
     public void salvar(Cliente cliente) {clienteRepository.save(cliente);}
-    public void excluir(Cliente cliente) {clienteRepository.deleteCliente(cliente);}
+    public void excluir(Cliente cliente) {clienteRepository.delete(cliente);}
     public List<Cliente> Todos() {return clienteRepository.findAll();}
 }

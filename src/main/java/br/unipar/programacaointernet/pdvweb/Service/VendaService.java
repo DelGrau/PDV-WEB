@@ -13,7 +13,7 @@ public class VendaService {
     }
 
     public List<Venda> getAllVendas() {
-        return vendaRepository.findAllVendas();
+        return vendaRepository.findAll();
     }
 
     public Venda getVendaById(Integer id) {
@@ -21,14 +21,14 @@ public class VendaService {
     }
 
     public Venda saveVenda(Venda venda) {
-        return vendaRepository.saveVenda(venda);
+        return vendaRepository.save(venda);
     }
 
     public Venda updateVenda(Venda venda) {
-        return vendaRepository.updateVenda(venda);
+        return vendaRepository.save(venda);
     }
 
     public void deleteVenda(Venda venda) {
-        vendaRepository.deleteVenda(venda);
+        vendaRepository.delete(venda);
     }
 }
