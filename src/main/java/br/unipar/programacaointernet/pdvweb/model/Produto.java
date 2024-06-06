@@ -27,6 +27,7 @@ public class Produto {
      * - Loja de Roupas: Camisas, Blusas, Calças...
      * - Loja de Eletronicos: Perifericos, Placa de Vídeo...
      */
+
     private String categoria;
 
 }
