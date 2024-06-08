@@ -12,7 +12,7 @@ import java.util.List;
 
 @Tag(name = "/api/vendas",
 description = "Endpoints das vendas")
-@Controller
+@RestController
 @RequestMapping("/api/vendas")
 public class VendaApiController {
     private final VendaService vendaService;
@@ -22,6 +22,7 @@ public class VendaApiController {
     }
 
     @Operation(description = "Retorna todas as vendas")
+    @GetMapping
     public ResponseEntity<List<Venda>> getVendas() {
         return ResponseEntity.ok(vendaService.getAllVendas());
     }
