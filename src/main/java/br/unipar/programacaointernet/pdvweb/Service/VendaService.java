@@ -2,9 +2,10 @@ package br.unipar.programacaointernet.pdvweb.Service;
 
 import br.unipar.programacaointernet.pdvweb.model.Venda;
 import br.unipar.programacaointernet.pdvweb.repository.VendaRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class VendaService {
     private VendaRepository vendaRepository;
 
@@ -28,7 +29,9 @@ public class VendaService {
         return vendaRepository.save(venda);
     }
 
-    public void deleteVenda(Venda venda) {
+    public void deleteVenda(Integer id) {
+        Venda venda = vendaRepository.findVendaById(id);
         vendaRepository.delete(venda);
+
     }
 }
