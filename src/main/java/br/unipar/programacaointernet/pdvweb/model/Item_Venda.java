@@ -1,5 +1,6 @@
 package br.unipar.programacaointernet.pdvweb.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +20,7 @@ public class Item_Venda {
 
     private Double valor_total;
 
+    @JsonIgnore
     @ManyToOne
     private Venda venda;
 
