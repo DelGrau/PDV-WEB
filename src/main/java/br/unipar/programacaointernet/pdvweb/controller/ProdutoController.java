@@ -10,7 +10,7 @@ import java.util.List;
 
 @Tag(name = "/ProdutoController")
 @RestController
-@RequestMapping("/produto")
+@RequestMapping("/api/produto")
 public class ProdutoController {
     private final ProdutoService produtoService;
 

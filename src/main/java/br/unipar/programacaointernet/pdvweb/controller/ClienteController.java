@@ -11,6 +11,7 @@ import java.nio.file.Path;
 import java.util.List;
 @Tag(name = "/clientecontrollerapi")
 @Controller
+@RequestMapping("/api/cliente")
 public class ClienteController {
     private final ClienteService clienteService;
 

@@ -13,6 +13,7 @@ import java.util.List;
 @Tag(name = "/api/vendas",
 description = "Endpoints das vendas")
 @Controller
+@RequestMapping("/api/vendas")
 public class VendaController {
     private final VendaService vendaService;
 
@@ -21,31 +22,30 @@ public class VendaController {
     }
 
     @Operation(description = "Retorna todas as vendas")
-    @GetMapping(path = "/vendas")
     public ResponseEntity<List<Venda>> getVendas() {
         return ResponseEntity.ok(vendaService.getAllVendas());
     }
 
     @Operation(description = "Retorna a Venda pelo ID")
-    @GetMapping(path = "/vendas/{idVenda}")
+    @GetMapping(path = "/{idVenda}")
     public ResponseEntity<Venda> getVendaById(@PathVariable("idVenda") Integer idVenda) {
         return ResponseEntity.ok(vendaService.getVendaById(idVenda));
     }
 
     @Operation(description = "Salva a venda")
-    @PostMapping(path = "/vendas/save")
+    @PostMapping(path = "/save")
     public ResponseEntity<Venda> saveVenda(@RequestBody Venda venda) {
         return ResponseEntity.ok(vendaService.saveVenda(venda));
     }
 
     @Operation(description = "Atualiza uma venda já existente")
-    @PutMapping(path = "/vendas/save")
+    @PutMapping(path = "/save")
     public ResponseEntity<Venda> updateVenda(@RequestBody Venda venda) {
         return ResponseEntity.ok(vendaService.updateVenda(venda));
     }
 
     @Operation(description = "Deleta uma venda existente")
-    @DeleteMapping(path = "/vendas/{idVenda}")
+    @DeleteMapping(path = "/{idVenda}")
     public ResponseEntity<String> deleteVenda(@PathVariable("idVenda") Integer idVenda) {
         vendaService.deleteVenda(idVenda);
         return ResponseEntity.ok("Venda "+
