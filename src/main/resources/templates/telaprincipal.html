@@ -13,21 +13,27 @@
             <button type="submit">Buscar</button>
         </form>
 
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Data</th>
-        <th>Valor</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="venda : ${vendasFiltradas}">
-        <td th:text="${venda.id}"></td>
-        <td th:text="${venda.data}"></td>
-        <td th:text="${venda.valor}"></td>
-    </tr>
-    </tbody>
-</table>
-</body>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Codigo Cliente</th>
+                <th>Cliente</th>
+                <th>Data</th>
+                <th>Valor Total</th>
+                <th>Observações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="venda : ${vendas}">
+                <td th:text="${venda.getId()}"></td>
+                <td th:text="${venda.getCliente().getId()} "></td>
+                <td th:text="${venda.getCliente().getNome()}"></td>
+                <td th:text="${venda.getData()}"></td>
+                <td th:text="${venda.getTotal()}"></td>
+                <td th:text="${venda.getObservacoes()}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
 </html>
