@@ -1,4 +1,4 @@
-package br.unipar.programacaointernet.pdvweb.controller;
+package br.unipar.programacaointernet.pdvweb.controller.venda;
 
 import br.unipar.programacaointernet.pdvweb.Service.VendaService;
 import br.unipar.programacaointernet.pdvweb.model.Venda;
@@ -14,10 +14,10 @@ import java.util.List;
 description = "Endpoints das vendas")
 @Controller
 @RequestMapping("/api/vendas")
-public class VendaController {
+public class VendaApiController {
     private final VendaService vendaService;
 
-    public VendaController(VendaService vendaService) {
+    public VendaApiController(VendaService vendaService) {
         this.vendaService = vendaService;
     }
 
