@@ -7,5 +7,8 @@ import org.springframework.data.relational.core.sql.In;
 import java.util.List;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
+        List<Cliente> findAll(Cliente cliente);
         Cliente findClienteById(Integer id);
+        void saveCliente(Cliente cliente);
+        void deleteCliente(Cliente cliente);
 }
