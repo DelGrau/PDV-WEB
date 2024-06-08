@@ -1,6 +1,7 @@
 package br.unipar.programacaointernet.pdvweb.controller.venda;
 
 import br.unipar.programacaointernet.pdvweb.Service.VendaService;
+import br.unipar.programacaointernet.pdvweb.model.Item_Venda;
 import br.unipar.programacaointernet.pdvweb.model.Venda;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -36,6 +37,7 @@ public class VendaApiController {
     @Operation(description = "Salva a venda")
     @PostMapping(path = "/save")
     public ResponseEntity<Venda> saveVenda(@RequestBody Venda venda) {
+
         return ResponseEntity.ok(vendaService.saveVenda(venda));
     }
 
@@ -50,7 +52,7 @@ public class VendaApiController {
     public ResponseEntity<String> deleteVenda(@PathVariable("idVenda") Integer idVenda) {
         vendaService.deleteVenda(idVenda);
         return ResponseEntity.ok("Venda "+
-                vendaService.getVendaById(idVenda).getId()
+                idVenda
                 +" deletada com sucesso");
     }
 
