@@ -1,6 +1,6 @@
 package br.unipar.programacaointernet.pdvweb.controller.venda;
 
-import br.unipar.programacaointernet.pdvweb.Service.VendaService;
+import br.unipar.programacaointernet.pdvweb.service.VendaService;
 import br.unipar.programacaointernet.pdvweb.model.Venda;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

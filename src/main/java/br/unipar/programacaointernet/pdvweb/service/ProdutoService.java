@@ -1,4 +1,4 @@
-package br.unipar.programacaointernet.pdvweb.Service;
+package br.unipar.programacaointernet.pdvweb.service;
 
 import br.unipar.programacaointernet.pdvweb.model.Produto;
 import br.unipar.programacaointernet.pdvweb.repository.ProdutoRepository;

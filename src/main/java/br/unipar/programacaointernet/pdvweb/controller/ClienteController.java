@@ -1,13 +1,12 @@
 package br.unipar.programacaointernet.pdvweb.controller;
 
-import br.unipar.programacaointernet.pdvweb.Service.ClienteService;
+import br.unipar.programacaointernet.pdvweb.service.ClienteService;
 import br.unipar.programacaointernet.pdvweb.model.Cliente;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.file.Path;
 import java.util.List;
 @Tag(name = "/clientecontrollerapi")
 @Controller

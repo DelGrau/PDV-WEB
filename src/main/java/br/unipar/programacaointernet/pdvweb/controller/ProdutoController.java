@@ -1,6 +1,6 @@
 package br.unipar.programacaointernet.pdvweb.controller;
 
-import br.unipar.programacaointernet.pdvweb.Service.ProdutoService;
+import br.unipar.programacaointernet.pdvweb.service.ProdutoService;
 import br.unipar.programacaointernet.pdvweb.model.Produto;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;

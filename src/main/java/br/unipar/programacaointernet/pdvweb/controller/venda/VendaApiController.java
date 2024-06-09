@@ -1,12 +1,10 @@
 package br.unipar.programacaointernet.pdvweb.controller.venda;
 
-import br.unipar.programacaointernet.pdvweb.Service.VendaService;
-import br.unipar.programacaointernet.pdvweb.model.Item_Venda;
+import br.unipar.programacaointernet.pdvweb.service.VendaService;
 import br.unipar.programacaointernet.pdvweb.model.Venda;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
