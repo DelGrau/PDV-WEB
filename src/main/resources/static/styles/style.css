@@ -7,6 +7,7 @@ body {
 }
 h1 {
     color: #333;
+    text-align: center;
 }
 form {
     background-color: #fff;
@@ -43,6 +44,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
 }
 th, td {
     border: 1px solid #ccc;
@@ -50,5 +53,5 @@ th, td {
     text-align: left;
 }
 th {
-    background-color: #f2f2f2;
+    background-color: #fff;
 }
