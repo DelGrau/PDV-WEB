@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @Tag(name = "/clientecontrollerapi")
-@Controller
+@RestController
 @RequestMapping("/api/cliente")
 public class ClienteController {
     private final ClienteService clienteService;
@@ -24,7 +24,7 @@ public class ClienteController {
     }
 
     @PostMapping(path = "/getbyid")
-    public  ResponseEntity<Cliente> GetById(@RequestBody Integer id){
+    public  ResponseEntity<Cliente> GetById(@RequestParam Integer id){
         return ResponseEntity.ok(clienteService.buscarPorId(id));
     }
     @DeleteMapping(path = "/delete")
