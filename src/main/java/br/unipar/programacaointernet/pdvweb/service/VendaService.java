@@ -1,5 +1,6 @@
 package br.unipar.programacaointernet.pdvweb.service;
 
+import br.unipar.programacaointernet.pdvweb.model.Item_Venda;
 import br.unipar.programacaointernet.pdvweb.model.Venda;
 import br.unipar.programacaointernet.pdvweb.repository.VendaRepository;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,9 @@ public class VendaService {
     }
 
     public Venda saveVenda(Venda venda) {
+        for (Item_Venda iv : venda.getItem_venda()) {
+            iv.setVenda(venda);
+        }
         return vendaRepository.save(venda);
     }
 
