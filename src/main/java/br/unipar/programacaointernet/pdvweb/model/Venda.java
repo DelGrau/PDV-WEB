@@ -28,6 +28,7 @@ public class Venda {
 
     @OneToMany(mappedBy = "venda",      // Diz que está baseado no atributo venda da classe Item_venda
             fetch = FetchType.EAGER,    // Traz todos os Item_venda quando carregar a venda
-            orphanRemoval = true)       // Apaga os Item_venda quando a Venda for Excluida
+            orphanRemoval = true,       // Apaga os Item_venda quando a Venda for Excluida
+            cascade = CascadeType.ALL)
     private List<Item_Venda> item_venda;
 }
