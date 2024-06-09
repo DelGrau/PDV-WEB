@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Tag(name = "/ProdutoController")
+@Tag(name = "/api/produto")
 @RestController
 @RequestMapping("/api/produto")
 public class ProdutoController {
