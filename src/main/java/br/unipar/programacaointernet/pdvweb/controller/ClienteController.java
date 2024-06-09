@@ -8,8 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@Tag(name = "/clientecontrollerapi")
-@Controller
+@Tag(name = "/api/cliente")
+@RestController
 @RequestMapping("/api/cliente")
 public class ClienteController {
     private final ClienteService clienteService;
