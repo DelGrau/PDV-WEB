@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Getter
@@ -19,7 +19,7 @@ public class Venda {
 
     private String observacoes;
 
-    private Date data;
+    private LocalDate data;
 
     private double total;
 
