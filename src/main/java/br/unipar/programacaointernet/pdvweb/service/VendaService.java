@@ -35,6 +35,9 @@ public class VendaService {
     }
 
     public Venda updateVenda(Venda venda) {
+        for (Item_Venda iv : venda.getItem_venda()) {
+            iv.setVenda(venda);
+        }
         return vendaRepository.save(venda);
     }
 
