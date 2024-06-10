@@ -27,7 +27,7 @@ public class VendaApiController {
     }
 
     @Operation(description = "Retorna a Venda pelo ID")
-    @GetMapping(path = "/{idVenda}")
+    @PostMapping(path = "/{idVenda}")
     public ResponseEntity<Venda> getVendaById(@PathVariable("idVenda") Integer idVenda) {
         return ResponseEntity.ok(vendaService.getVendaById(idVenda));
     }

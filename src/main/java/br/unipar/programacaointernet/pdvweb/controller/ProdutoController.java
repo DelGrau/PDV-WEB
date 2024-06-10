@@ -24,7 +24,7 @@ public class ProdutoController {
     }
 
     @PostMapping(path = "/getById")
-    public ResponseEntity<Produto> getById(@RequestBody Integer id) {
+    public ResponseEntity<Produto> getById(@RequestParam Integer id) {
         Produto produto = produtoService.buscarPorId(id);
         if (produto != null) {
             return ResponseEntity.ok(produto);
