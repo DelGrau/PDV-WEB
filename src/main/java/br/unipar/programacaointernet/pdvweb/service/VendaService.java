@@ -5,10 +5,11 @@ import br.unipar.programacaointernet.pdvweb.model.Venda;
 import br.unipar.programacaointernet.pdvweb.repository.VendaRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 @Service
 public class VendaService {
-    private VendaRepository vendaRepository;
+    private final VendaRepository vendaRepository;
 
     public VendaService (VendaRepository repository) {
         this.vendaRepository = repository;
@@ -20,6 +21,10 @@ public class VendaService {
 
     public Venda getVendaById(Integer id) {
         return vendaRepository.findVendaById(id);
+    }
+
+    public List<Venda> getVendaByData(LocalDate dataInicial, LocalDate dataFinal) {
+        return vendaRepository.findVendaByData(dataInicial, dataFinal);
     }
 
     public Venda saveVenda(Venda venda) {
